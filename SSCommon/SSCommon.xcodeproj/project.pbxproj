@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1443500A1A662FD1002BB228 /* NSString+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 144350051A662FD1002BB228 /* NSString+Attribute.m */; };
+		1443500B1A662FD1002BB228 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 144350071A662FD1002BB228 /* NSString+MD5.m */; };
+		1443500C1A662FD1002BB228 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 144350091A662FD1002BB228 /* NSString+UUID.m */; };
 		148C8C441A662AFF00795CCF /* SSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C8C431A662AFF00795CCF /* SSObject.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		144350041A662FD1002BB228 /* NSString+Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Attribute.h"; sourceTree = SOURCE_ROOT; };
+		144350051A662FD1002BB228 /* NSString+Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Attribute.m"; sourceTree = SOURCE_ROOT; };
+		144350061A662FD1002BB228 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = SOURCE_ROOT; };
+		144350071A662FD1002BB228 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = SOURCE_ROOT; };
+		144350081A662FD1002BB228 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = SOURCE_ROOT; };
+		144350091A662FD1002BB228 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = SOURCE_ROOT; };
 		14714F411A662A6800D9188E /* libSSCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		148C8C421A662AFF00795CCF /* SSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSObject.h; sourceTree = SOURCE_ROOT; };
 		148C8C431A662AFF00795CCF /* SSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSObject.m; sourceTree = SOURCE_ROOT; };
@@ -58,6 +67,12 @@
 		14714F431A662A6800D9188E /* SSCommon */ = {
 			isa = PBXGroup;
 			children = (
+				144350041A662FD1002BB228 /* NSString+Attribute.h */,
+				144350051A662FD1002BB228 /* NSString+Attribute.m */,
+				144350061A662FD1002BB228 /* NSString+MD5.h */,
+				144350071A662FD1002BB228 /* NSString+MD5.m */,
+				144350081A662FD1002BB228 /* NSString+UUID.h */,
+				144350091A662FD1002BB228 /* NSString+UUID.m */,
 				148C8C421A662AFF00795CCF /* SSObject.h */,
 				148C8C431A662AFF00795CCF /* SSObject.m */,
 			);
@@ -120,6 +135,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1443500C1A662FD1002BB228 /* NSString+UUID.m in Sources */,
+				1443500B1A662FD1002BB228 /* NSString+MD5.m in Sources */,
+				1443500A1A662FD1002BB228 /* NSString+Attribute.m in Sources */,
 				148C8C441A662AFF00795CCF /* SSObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
