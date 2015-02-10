@@ -25,6 +25,7 @@
 @property (nonatomic, strong) UILabel *tlabel;
 @property (nonatomic, weak) id<FEPopPickerViewDataSource> dataSource;
 @property (nonatomic, assign) NSInteger selectIndex;
+@property (nonatomic, strong) UIColor *titleColor;
 
 - (id)initFromView:(UIView *)view;
 - (void)show;

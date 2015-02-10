@@ -56,7 +56,7 @@
 
 -(void)setUP{
     UIView *tview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 40)];
-    tview.backgroundColor = kThemeColor;
+    tview.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:tview];
     self.tview = tview;
     
@@ -71,6 +71,10 @@
     tableView.delegate = self;
     [self addSubview:tableView];
     self.tableView = tableView;
+}
+
+-(void)setTitleColor:(UIColor *)titleColor{
+    self.tview.backgroundColor = titleColor;
 }
 
 #pragma mark - UITableViewDataSource
