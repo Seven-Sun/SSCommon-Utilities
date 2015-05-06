@@ -24,10 +24,10 @@
                     @try {
                         if (NSClassFromString([attributes[[property indexOfObject:key]] attribute]) == [NSNumber class] && ![dictionary[key] isKindOfClass:[NSNumber class]]) {
                             
-                            NSNumber *number = [f numberFromString:dictionary[key]];
+                            NSNumber *number = [[f numberFromString:dictionary[key]] copy];
                             [self setValue:number forKey:key];
                         }else{
-                            [self setValue:dictionary[key] forKey:key];
+                            [self setValue:[dictionary[key] copy] forKey:key];
                         }
                         
                     }
