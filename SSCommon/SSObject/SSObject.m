@@ -64,7 +64,7 @@
         id item = [self valueForKey:name];
         if ([item isKindOfClass:[NSString class]] || [item isKindOfClass:[NSNumber class]] || [item isKindOfClass:[NSDictionary class]] || [item isKindOfClass:[NSArray class]]) {
             if ([name isEqualToString:@"method"]) {
-                break;
+                continue;
             }
             if ([item isKindOfClass:[NSArray class]]) {
                 NSMutableArray *marray = [NSMutableArray new];
