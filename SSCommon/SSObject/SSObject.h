@@ -11,5 +11,5 @@
 @interface SSObject : NSObject
 @property (nonatomic, strong, readonly) NSDictionary *dictionary;
 -(id)initWithDictionary:(id)dictionary;
-
+-(void)addIgnorePropertys:(NSArray *)propertys;
 @end

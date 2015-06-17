@@ -10,7 +10,10 @@
 #import <objc/runtime.h>
 #import "NSString+Attribute.h"
 
+NSArray *ignorePropertys;
+
 @implementation SSObject
+
 
 -(id)initWithDictionary:(id)dictionary{
     if (dictionary && ![dictionary isKindOfClass:[NSNull class]]) {
@@ -63,7 +66,7 @@
     for (NSString *name in property) {
         id item = [self valueForKey:name];
         if ([item isKindOfClass:[NSString class]] || [item isKindOfClass:[NSNumber class]] || [item isKindOfClass:[NSDictionary class]] || [item isKindOfClass:[NSArray class]]) {
-            if ([name isEqualToString:@"method"]) {
+            if ([ignorePropertys containsObject:name]) {
                 continue;
             }
             if ([item isKindOfClass:[NSArray class]]) {
@@ -107,6 +110,10 @@
     }
     free(properties);
     return rv;
+}
+
+-(void)addIgnorePropertys:(NSArray *)propertys{
+    ignorePropertys = propertys;
 }
 
 - (id)copyWithZone:(NSZone *)zone
