@@ -17,48 +17,67 @@ NSArray *ignorePropertys;
 
 -(id)initWithData:(NSData *)data{
     id dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
-    return [self initWithDictionary:dic];
+    if (dic) {
+        self = [super init];
+        if (self) {
+            [self install:dic];
+        }
+        return self;
+    }
+    return nil;
     
 }
 
 -(id)initWithJson:(NSString *)json{
     NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
-    return [self initWithData:data];
+    id dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
+    if (dic) {
+        self = [super init];
+        if (self) {
+            [self install:dic];
+        }
+        return self;
+    }
+    return nil;
 }
 
 -(id)initWithDictionary:(id)dictionary{
     if (dictionary && ![dictionary isKindOfClass:[NSNull class]]) {
         self = [super init];
         if (self) {
-            NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-            NSArray *attributes = NULL;
-            NSArray *property = [self getAllProperty:&attributes class:[self class]];
-            for (NSString *key in property) {
-                if (![dictionary[key] isKindOfClass:[NSNull class]] && dictionary[key] != nil) {
-                    @try {
-                        if (NSClassFromString([attributes[[property indexOfObject:key]] attribute]) == [NSNumber class] && ![dictionary[key] isKindOfClass:[NSNumber class]]) {
-                            
-                            NSNumber *number = [[f numberFromString:dictionary[key]] copy];
-                            [self setValue:number forKey:key];
-                        }else{
-                            [self setValue:[dictionary[key] copy] forKey:key];
-                        }
-                        
-                    }
-                    @catch (NSException *exception) {
-                        NSLog(@"error create object %@",exception);
-                    }
-                    @finally {
-                        
-                    }
-                    
-                }
-            }
+            [self install:dictionary];
         }
         return self;
     }
     return nil;
     
+}
+
+-(void)install:(NSDictionary *)dictionary{
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    NSArray *attributes = NULL;
+    NSArray *property = [self getAllProperty:&attributes class:[self class]];
+    for (NSString *key in property) {
+        if (![dictionary[key] isKindOfClass:[NSNull class]] && dictionary[key] != nil) {
+            @try {
+                if (NSClassFromString([attributes[[property indexOfObject:key]] attribute]) == [NSNumber class] && ![dictionary[key] isKindOfClass:[NSNumber class]]) {
+                    
+                    NSNumber *number = [[f numberFromString:dictionary[key]] copy];
+                    [self setValue:number forKey:key];
+                }else{
+                    [self setValue:[dictionary[key] copy] forKey:key];
+                }
+                
+            }
+            @catch (NSException *exception) {
+                NSLog(@"error create object %@",exception);
+            }
+            @finally {
+                
+            }
+            
+        }
+    }
 }
 
 - (NSDictionary *)dictionary{
