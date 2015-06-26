@@ -15,6 +15,17 @@ NSArray *ignorePropertys;
 @implementation SSObject
 
 
+-(id)initWithData:(NSData *)data{
+    id dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
+    return [self initWithDictionary:dic];
+    
+}
+
+-(id)initWithJson:(NSString *)json{
+    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+    return [self initWithData:data];
+}
+
 -(id)initWithDictionary:(id)dictionary{
     if (dictionary && ![dictionary isKindOfClass:[NSNull class]]) {
         self = [super init];
