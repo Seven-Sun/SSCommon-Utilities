@@ -56,8 +56,15 @@ NSDictionary *dicData;
 -(void)install:(NSDictionary *)dictionary{
     dicData = dictionary;
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-    NSArray *attributes = NULL;
-    NSArray *property = [self getAllProperty:&attributes class:[self class]];
+    NSMutableArray *attributes = [NSMutableArray new];
+    NSMutableArray *property = [NSMutableArray new];
+    Class cl = [self class];
+    while (cl != [SSObject class]) {
+        NSArray *attr = NULL;
+        [property addObjectsFromArray:[self getAllProperty:&attr class:cl]];
+        [attributes addObjectsFromArray:attr];
+        cl = [cl superclass];
+    }
     for (NSString *key in property) {
         if (![dictionary[key] isKindOfClass:[NSNull class]] && dictionary[key] != nil) {
             @try {

@@ -11,15 +11,11 @@
 @implementation NSString (Attribute)
 
 -(NSString *)attribute{
-//    @"T@\"(*)\""
-//    NSRegularExpression *regex  = [NSRegularExpression regularExpressionWithPattern:@"T@\"(*)\"" options:NSRegularExpressionCaseInsensitive error:nil];
-//    NSString *encodedPoints;
-//    NSArray *result = [regex matchesInString:self options:NSMatchingReportProgress range:NSMakeRange(0, self.length)];
-//    for (NSTextCheckingResult* b in result){
-//        encodedPoints = [apiResponse substringWithRange:b.range];
-//    }
     NSArray *array = [self componentsSeparatedByString:@","];
     NSArray *attrs = [[array firstObject] componentsSeparatedByString:@"\""];
+    if (attrs.count < 2) {
+        return @"id";
+    }
     NSString *attr = [attrs objectAtIndex:1];
     return attr;
 }
