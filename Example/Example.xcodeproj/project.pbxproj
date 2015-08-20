@@ -18,8 +18,6 @@
 		142274A81B856C55001BF18E /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = 142274941B856C55001BF18E /* NSString+Verify.m */; };
 		142274A91B856C55001BF18E /* transform.c in Sources */ = {isa = PBXBuildFile; fileRef = 142274951B856C55001BF18E /* transform.c */; };
 		142274AA1B856C55001BF18E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 142274981B856C55001BF18E /* UIColor+Hex.m */; };
-		142274AB1B856C55001BF18E /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422749A1B856C55001BF18E /* UIColor+Theme.m */; };
-		142274AC1B856C55001BF18E /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422749C1B856C55001BF18E /* UIFont+AppFont.m */; };
 		142274AD1B856C55001BF18E /* UIImage+LogN.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422749E1B856C55001BF18E /* UIImage+LogN.m */; };
 		142274AE1B856C55001BF18E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 142274A01B856C55001BF18E /* UIImage+Resize.m */; };
 		143EDDB01A89CEE2003ED943 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143EDDAF1A89CEE2003ED943 /* main.m */; };
@@ -47,7 +45,6 @@
 /* Begin PBXFileReference section */
 		142274801B856C1B001BF18E /* NSString+Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Attribute.h"; sourceTree = "<group>"; };
 		142274811B856C1B001BF18E /* NSString+Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Attribute.m"; sourceTree = "<group>"; };
-		142274841B856C55001BF18E /* Categorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categorys.h; sourceTree = "<group>"; };
 		142274851B856C55001BF18E /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
 		142274861B856C55001BF18E /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
 		142274871B856C55001BF18E /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
@@ -68,10 +65,6 @@
 		142274961B856C55001BF18E /* transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transform.h; sourceTree = "<group>"; };
 		142274971B856C55001BF18E /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		142274981B856C55001BF18E /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		142274991B856C55001BF18E /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
-		1422749A1B856C55001BF18E /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
-		1422749B1B856C55001BF18E /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
-		1422749C1B856C55001BF18E /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
 		1422749D1B856C55001BF18E /* UIImage+LogN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LogN.h"; sourceTree = "<group>"; };
 		1422749E1B856C55001BF18E /* UIImage+LogN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LogN.m"; sourceTree = "<group>"; };
 		1422749F1B856C55001BF18E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -117,7 +110,6 @@
 		142274831B856C55001BF18E /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
-				142274841B856C55001BF18E /* Categorys.h */,
 				142274851B856C55001BF18E /* CLLocation+YCLocation.h */,
 				142274861B856C55001BF18E /* CLLocation+YCLocation.m */,
 				142274871B856C55001BF18E /* NSDate+Formatter.h */,
@@ -138,10 +130,6 @@
 				142274961B856C55001BF18E /* transform.h */,
 				142274971B856C55001BF18E /* UIColor+Hex.h */,
 				142274981B856C55001BF18E /* UIColor+Hex.m */,
-				142274991B856C55001BF18E /* UIColor+Theme.h */,
-				1422749A1B856C55001BF18E /* UIColor+Theme.m */,
-				1422749B1B856C55001BF18E /* UIFont+AppFont.h */,
-				1422749C1B856C55001BF18E /* UIFont+AppFont.m */,
 				1422749D1B856C55001BF18E /* UIImage+LogN.h */,
 				1422749E1B856C55001BF18E /* UIImage+LogN.m */,
 				1422749F1B856C55001BF18E /* UIImage+Resize.h */,
@@ -347,11 +335,9 @@
 				143EDDB31A89CEE2003ED943 /* AppDelegate.m in Sources */,
 				142274A31B856C55001BF18E /* NSString+DateFromNow.m in Sources */,
 				142274A11B856C55001BF18E /* CLLocation+YCLocation.m in Sources */,
-				142274AB1B856C55001BF18E /* UIColor+Theme.m in Sources */,
 				143EDDB61A89CEE2003ED943 /* Example.xcdatamodeld in Sources */,
 				143EDDB91A89CEE2003ED943 /* ViewController.m in Sources */,
 				142274A51B856C55001BF18E /* NSString+MD5.m in Sources */,
-				142274AC1B856C55001BF18E /* UIFont+AppFont.m in Sources */,
 				142274821B856C1B001BF18E /* NSString+Attribute.m in Sources */,
 				142274A91B856C55001BF18E /* transform.c in Sources */,
 				142274A81B856C55001BF18E /* NSString+Verify.m in Sources */,
