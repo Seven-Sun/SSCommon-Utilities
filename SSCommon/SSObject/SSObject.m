@@ -11,7 +11,7 @@
 #import "NSString+Attribute.h"
 
 NSArray *ignorePropertys;
-NSDictionary *dicData;
+//NSDictionary *dicData;
 @implementation SSObject
 
 
@@ -54,7 +54,7 @@ NSDictionary *dicData;
 }
 
 -(void)install:(NSDictionary *)dictionary{
-    dicData = dictionary;
+//    dicData = dictionary;
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     NSMutableArray *attributes = [NSMutableArray new];
     NSMutableArray *property = [NSMutableArray new];
@@ -171,7 +171,7 @@ NSDictionary *dicData;
 }
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"%@",dicData];
+    return [NSString stringWithFormat:@"%@",self.dictionary];
 }
 
 @end
