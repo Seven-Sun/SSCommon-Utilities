@@ -11,6 +11,9 @@
 @interface NSString (Verify)
 
 -(BOOL)isEmailType;
+//default is china. country is 'CN'
 -(BOOL)isPhone;
+
+-(BOOL)isPhoneWithCountry:(NSString *)code;
 
 @end

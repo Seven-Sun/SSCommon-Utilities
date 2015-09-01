@@ -18,8 +18,12 @@
 }
 
 -(BOOL)isPhone{
+    [self isPhoneWithCountry:@"CN"];
+}
+
+-(BOOL)isPhoneWithCountry:(NSString *)code{
     NSError *error;
-    NBPhoneNumber *phone = [[NBPhoneNumberUtil sharedInstance] parse:self defaultRegion:@"CN" error:&error];
+    NBPhoneNumber *phone = [[NBPhoneNumberUtil sharedInstance] parse:self defaultRegion:code error:&error];
     if ([[NBPhoneNumberUtil sharedInstance] isValidNumber:phone]) {
         return YES;
     }else{
